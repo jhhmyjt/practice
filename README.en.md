@@ -12,4 +12,4 @@
 
 ## Page preview address
 
-one:[navbar.html](http://htmlpreview.github.io/?https://github.com/jhhmyjt/practice/blob/master/one/navbar.html)
+one:[navbar.html](https://jhhmyjt.github.io/practice/one/navbar.html)
