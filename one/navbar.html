@@ -1,6 +1,6 @@
 <!--
  * @Date: 2020-11-21 00:15:34
- * @LastEditTime: 2020-11-21 01:16:22
+ * @LastEditTime: 2020-11-21 13:27:14
  * @FilePath: \practice\one\navbar.html
 -->
 <!DOCTYPE html>
@@ -15,14 +15,15 @@
         <title>Show-myself</title>
         <meta name="description" content="just a practice">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
         <style>
             ul{
                 list-style-type: none;
                 padding: 0;
                 margin: 0;
                 overflow: hidden;
+                text-align: center;
                 background-color: black;
-
             }
             ul li{
                 display: inline;
@@ -45,26 +46,70 @@
                 width: 100%;
                 height: 1000px;
             }
+            #list1,#list2,#list3,#list4{
+                float: left;
+                width: 140px;
+                height: 100px;
+                border: 1px solid rgb(201, 200, 200);
+                padding: 2px;
+                background-color: rgb(250, 244, 234);
+                opacity: 0;
+                transition: opacity 0.6s;
+                -moz-transition: opacity 0.6s;	/* Firefox 4 */
+                -webkit-transition: opacity 0.6s;	/* Safari 和 Chrome */
+                -o-transition: opacity 0.6s;	/* Opera */
+            }
         </style>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <nav id="float_banner">
-            <ul id="content">
-                <li class="item"><a href="">朋友们好啊</a></li>
-                <li class="item"><a href="">我是代码乱敲派掌门人</a></li>
-                <li class="item"><a href="">联系</a></li>
-                <li class="item"><a href="">关于</a></li>
-                <li class="item" style="float: right;"><a href="">别点我！</a></li>
+        <nav id="banner">
+            <ul id="menu">
+                <li onmouseover="showDiv('list1')" onmouseout="hiddenDiv('list1')">
+                    <a href="#">朋友们好啊</a>
+                </li>
+                <li onmouseover="showDiv('list2')" onmouseout="hiddenDiv('list2')">
+                    <a href="#">我是</a>
+                </li>
+                <li onmouseover="showDiv('list3')" onmouseout="hiddenDiv('list3')">
+                    <a href="#">联系</a>
+                </li>
+                <li onmouseover="showDiv('list4')" onmouseout="hiddenDiv('list4')">
+                    <a href="#">关于</a>
+                </li>
+                <li style="float: right;">
+                    <a href="">别点我！</a>
+                </li>
             </ul>
         </nav>
+        <div id="list1">
+            <p>我叫:</p>
+            <p>龚坤</p>
+        </div>
+        <div id="list2">
+            <p>代码乱敲派</p>
+            <p>掌门人</p>
+        </div>
+        <div id="list3">
+            <p>qq:</p>
+            <p>2582355704</p>
+        </div>
+        <div id="list4">
+            <p>我实在</p>
+            <p>想不出文案了这件事</p>
+        </div>
         <section class="s1">
             
         </section>
         <script>
-            
+            function showDiv(id){
+                document.getElementById(id).style.opacity="1";
+            }
+            function hiddenDiv(id){
+                document.getElementById(id).style.opacity="0";
+            }
         </script>
     </body>
 </html>
